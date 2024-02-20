@@ -2,7 +2,7 @@
 
 ## Description
 
-"Stranlate And Learn Easy est une application dédiée à la traduction et à l'apprentissage. Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options de 20, 50, et 100 mots."
+"Stranslate And Learn Easy est une application dédiée à la traduction et à l'apprentissage. Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options de 20, 50, et 100 mots."
 
 ## Fonctionnalités
 
