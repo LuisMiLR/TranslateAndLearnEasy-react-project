@@ -1,4 +1,4 @@
-# StranlateAndLearnEasy
+# StranslateAndLearnEasy
 
 ## Description
 
