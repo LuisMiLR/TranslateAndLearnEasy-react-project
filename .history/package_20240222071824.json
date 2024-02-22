@@ -1,0 +1,23 @@
+{
+  "name": "translateandlearneasy",
+  "version": "1.0.0",
+  "description": "learning and translate app",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": ""
+  },
+  "keywords": [
+    "React",
+    "nodejs",
+    "expressjs",
+    "mongoDb",
+    "firebase",
+    "apiDeepL"
+  ],
+  "author": "LuisMiLR",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
