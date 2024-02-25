@@ -2,11 +2,12 @@
 
 ## Description
 
-"Translate And Learn Easy est une application de traduction de l'Anglais en Français et dédié à l'apprentissage.
-Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options de 20, 50, et 100 mots."
+"Translate And Learn Easy est un side project MERN : d'une part une application de traduction Anglais / Français qui permet l'apprentissage des mots consultés via un système de gamification.
+Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options d'enseignement."
 
 ## Fonctionnalités
 
+- Authentification sécurisé avec JWT, bcryptjs, Firebase et google Oauth.
 - Traductions de mots, text ou documents en utilisant l'API DeepL. (Les fonctionnalités seront ajouter progressivement)
 - Plateau de jeu pour apprendre et améliorer la mémoire des termes consultés.
 - un systeme de comptage de score et d'amélioration des connaissances.
@@ -19,12 +20,14 @@ Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offr
 - Tailwind CSS
 - Node.js
 - MongoDB (pour le stockage des données)
-- Firebase (pour l'authentification et la gestion des utilisateurs)
+- Firebase (pour l'authentification et la gestion des utilisateurs Oauth)
 - API DeepL (pour les traductions)
+- JWT
+- Bcryptjs
 
 ## Prérequis
 
-Avant de commencer, assurez-vous d'avoir installé les outils suivants sur votre machine :
+Avant de commencer, assurez-vous d'avoir installé ou crée les accès aux outils suivants :
 
 - Node.js (https://nodejs.org/)
 - MongoDB (https://www.mongodb.com/)
