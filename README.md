@@ -19,11 +19,13 @@ Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offr
 - React
 - Tailwind CSS
 - Node.js
+- Expressjs
 - MongoDB (pour le stockage des données)
 - Firebase (pour l'authentification et la gestion des utilisateurs Oauth)
 - API DeepL (pour les traductions)
-- JWT
-- Bcryptjs
+- JWT (sécurity signin)
+- Bcryptjs (hash password)
+- CORS (secure HTTP requests)
 
 ## Prérequis
 
