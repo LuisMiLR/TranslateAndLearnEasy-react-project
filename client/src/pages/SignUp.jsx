@@ -109,9 +109,7 @@ export default function SignUp() {
               </Link>
             </div>
             <div>
-              {error && (
-                <p className="text-red-400 text-base text-sm">{error}</p>
-              )}
+              {error && <p className="text-red-400 text-base">{error}</p>}
             </div>
           </div>
           <div className=" flex flex-col gap-4 mx-9 mt-8 mb-3">
