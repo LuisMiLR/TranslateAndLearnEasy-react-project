@@ -19,7 +19,7 @@ export default {
           20: "rgba(255, 255, 255, .2)",
           221: "rgba(255, 255, 255, .02)",
         },
-        red: "#ff4d4d",
+        red2: "#ff4d4d",
         blue2: "#92bee7",
         purple100: "#866cc7",
         qualified: "#3cb652",
