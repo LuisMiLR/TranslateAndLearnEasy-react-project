@@ -91,7 +91,7 @@ export default function SignUp() {
               Mot de passe *
             </label>
             <input
-              type="text"
+              type="password"
               placeholder="mot de passe"
               className="bg-black-80  p-2 rounded-lg focus:outline-none "
               id="password"
