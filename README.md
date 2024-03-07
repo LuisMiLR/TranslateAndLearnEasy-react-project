@@ -1,8 +1,8 @@
-# StranlateAndLearnEasy
+# TranlateAndLearnEasy
 
 ## Description
 
-"Translate And Learn Easy est mon site project MERN : Une application de traduction Anglais / Français qui permet l'apprentissage des mots consultés via un système de gamification.
+"Translate And Learn Easy: Une application de traduction Anglais / Français qui permet l'apprentissage dynamique des mots consultés via un système de gamification.
 Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options d'enseignement."
 
 ## Fonctionnalités
