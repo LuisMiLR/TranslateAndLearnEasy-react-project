@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react-swc";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  //create proxy for request correct place
   server: {
     proxy: {
       "/server": {

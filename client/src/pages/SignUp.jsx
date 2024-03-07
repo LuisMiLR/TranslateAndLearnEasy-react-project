@@ -2,30 +2,30 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
-  const [formData, setFromData] = useState({});
-  const [error, setError] = useState(null);
+  const [formData, setFormData] = useState({});
+  const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
-    setFromData({
-      // operator to keep the form element (username, email...)
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
+    // operator to keep the form element (username, email...)
+    setFormData({ ...formData, [e.target.id]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //Vérifie si les champs sont présent dans le formulaire
+
+    //Vérifier si les champs sont présent dans le formulaire
     const requiredFields = ["username", "email", "password"];
 
     if (!requiredFields.every((field) => formData[field])) {
-      setError(`* Veuillez renseigner les champs obligatoires.`);
+      setError(true);
       return;
     }
 
     try {
       setLoading(true);
+      setError(false);
       const res = await fetch("/server/auth/signup", {
         method: "POST",
         headers: {
@@ -35,33 +35,30 @@ export default function SignUp() {
       });
       const data = await res.json();
       console.log(data);
-      if (data.success === false) {
-        //succes a from middleware handler error
-        setLoading(false);
-        setError(data.message);
-        return;
-      }
       setLoading(false);
-      setError(null);
-      navigate("/sign-in");
+      if (res.status === 500) {
+        setError("Erreur, inscription impossible");
+        return;
+      } else {
+        navigate("/sign-in");
+      }
     } catch (error) {
       setLoading(false);
-      setError(error.message);
+      setError(true);
     }
-    // console.log(data);
   };
   return (
     <div className="bg-dark max-w-md mx-auto my-12 text-slate-100 rounded-lg">
-      <div className="flex flex-col gap-2 mx-9 ">
-        <h1 className="text-xl font-normal py-12">
-          Créer un compte <span className="text-slate-100">Translate&</span>
+      <div className="flex justify-center gap-2 mx-9 ">
+        <h1 className="text-2xl font-normal py-12">
+          Inscription <span className="text-slate-100">Translate&</span>
           <span className="text-orange-400">LearnEasy</span>
         </h1>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col">
         <div className="grid w-full items-center gap-3 ">
           <div className="flex flex-col space-y-1.5 mx-9 ">
-            <label htmlFor="name" className="text-base  font-normal ">
+            <label htmlFor="username" className="text-base  font-normal ">
               Pseudo *
             </label>
             <input
@@ -109,7 +106,12 @@ export default function SignUp() {
               </Link>
             </div>
             <div>
-              {error && <p className="text-red-400 text-base">{error}</p>}
+              {error && (
+                <p className="text-red-400 text-base">
+                  {error &&
+                    "Erreur, quelque chose ne va pas dans votre saisie!"}
+                </p>
+              )}
             </div>
           </div>
           <div className=" flex flex-col gap-4 mx-9 mt-8 mb-3">
@@ -117,7 +119,7 @@ export default function SignUp() {
               Se connecter avec Google
             </button>
           </div>
-          <div disable={loading} className=" flex flex-col gap-4 mx-9 mb-9">
+          <div disabled={loading} className=" flex flex-col gap-4 mx-9 mb-9">
             <button className="bg-emerald-600 p-2 rounded-lg uppercase hover:bg-emerald-700">
               {loading ? "Loading..." : "INSCRIPTION"}
             </button>
