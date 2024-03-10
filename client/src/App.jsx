@@ -5,6 +5,7 @@ import SignUp from "./pages/SignUp";
 import About from "./pages/About";
 import Profile from "./pages/Profile";
 import Header from "./components/Header";
+import WorkPlace from "./pages/WorkPlace";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Sign-in" element={<SignIn />} />
         <Route path="/Sign-up" element={<SignUp />} />
+        <Route path="/Work-place" element={<WorkPlace />} />
         <Route path="/About" element={<About />} />
         <Route path="/Profile" element={<Profile />} />
       </Routes>

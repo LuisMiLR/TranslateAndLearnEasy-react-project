@@ -4,11 +4,13 @@ import dotenv from "dotenv";
 import "./db/connect.js";
 import userRouter from "./routes/user.route.js";
 import authRouter from "./routes/auth.route.js";
+import translateRouter from "./routes/translate.routes.js";
 dotenv.config();
 
 app.use(express.json());
 app.use("/server/user", userRouter);
 app.use("/server/auth", authRouter);
+app.use("/server/translate", translateRouter);
 
 //middleware handle possible errors
 app.use((err, req, res, next) => {
