@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       colors: {
         black: {
-          40: "#a2a2a4",
+          30: "#131414", //#383838 #252525 #131414 #5B5B5B
+          40: "#1D1D1D",
           50: "#8a8b8d",
           80: "#454549",
           90: "#2d2e32",
@@ -23,8 +24,8 @@ module.exports = {
         },
         red2: "#ff4d4d",
         blue2: "#92bee7",
-        blue5: "#434665",
-        purple50: "#A1869E",
+        blue5: "#023047", //023047; #434665
+        purple50: "#453D5B",
         purple60: "#806B7E",
         purple70: "#302942",
         purple100: "#564A75",

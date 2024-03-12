@@ -11,7 +11,7 @@ export default function Home() {
       <section>
         <WavyBackground
           colors={["#1E34FA", "#594980 ", "#866cc7", "#FF5630"]}
-          className="max-w-4xl mx-auto pb-40"
+          className="max-w-4xl mx-auto pb-20"
         >
           <h1 className="text-2xl md:text-4xl lg:text-7xl text-slate-100 font-bold inter-var text-center">
             Plonge dans la maitrise de l'Anglais
@@ -23,7 +23,7 @@ export default function Home() {
       </section>
 
       <section className="text-slate-100 mb-7 ">
-        <div className="flex flex-row bg-gradient-to-r from-purple100 to-blue-70 max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
+        <div className="flex flex-row bg-gradient-to-r from-purple100 to-purple-70 max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
           <div className="flex flex-col items-start  mr-28">
             <h2 className="text-4xl font-semibold pb-8">
               Améliore tes compétences en Anglais

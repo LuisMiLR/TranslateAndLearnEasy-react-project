@@ -41,7 +41,7 @@ export default function SignIn() {
         setError("Erreur");
         return;
       } else {
-        navigate("/");
+        navigate("/work-place");
       }
     } catch (error) {
       setLoading(false);
