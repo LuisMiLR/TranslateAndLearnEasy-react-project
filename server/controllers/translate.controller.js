@@ -3,6 +3,7 @@ import translator from "../configDL/config.js";
 export const translateText = async (req, res) => {
   try {
     const textToTranslate = req.body.text;
+    console.log("Text à traduire:", textToTranslate);
 
     //The translateText method provided by the deepl-node package
     const result = await translator.translateText(textToTranslate, null, "fr"); //'fr' si a target language

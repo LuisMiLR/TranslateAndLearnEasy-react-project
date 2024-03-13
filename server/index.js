@@ -1,5 +1,7 @@
 import express from "express";
+
 const app = express();
+import cors from "cors";
 import dotenv from "dotenv";
 import "./db/connect.js";
 import userRouter from "./routes/user.route.js";
@@ -11,6 +13,12 @@ app.use(express.json());
 app.use("/server/user", userRouter);
 app.use("/server/auth", authRouter);
 app.use("/server/translate", translateRouter);
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+  })
+);
 
 //middleware handle possible errors
 app.use((err, req, res, next) => {

@@ -1,6 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function WorkPlace() {
+  const [inputText, setInputText] = useState("");
+  const [translatedText, setTranslatedText] = useState("");
+  let typingTimeout = null; //keep delay
+
+  const handleInput = async (e) => {
+    const text = e.target.value;
+    setInputText(text);
+
+    clearTimeout(typingTimeout);
+
+    typingTimeout = setTimeout(() => {
+      translate(text); //run translate text
+    }, 500);
+  };
+
+  const translate = async (textToTranslate) => {
+    try {
+      const response = await fetch("/server/translate/translate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text: textToTranslate }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data);
+        setTranslatedText(data.text);
+      } else {
+        throw new Error("Erreur lors de la traduction");
+      }
+    } catch (error) {
+      console.log("Erreur serveur de traduction:", error.message);
+    }
+  };
+
   return (
     <div>
       <section className="bg-dark  max-w-6xl mx-auto h-100 pt-4 px-4 mt-20 rounded-lg">
@@ -14,15 +51,19 @@ export default function WorkPlace() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-x-2 pb-4">
-          <div className="bg-black-30 p-4 rounded-lg  focus:outline-none">
+        <div className="grid grid-cols-2 gap-x-2  pb-4">
+          <div className="bg-black-30 p-6 rounded-lg  focus:outline-none">
             <input
               type="text"
-              placeholder="Saisir le text à traduire ici..."
+              placeholder="Saisie le texte à traduire..."
               className=" bg-black-30 w-full py-16 text-gray-300 text-justify focus:outline-none  "
+              value={inputText}
+              onChange={handleInput}
             />
           </div>
-          <div className="bg-black-30 p-4 rounded-lg focus:outline-none"></div>
+          <div className="bg-black-30 p-6 rounded-lg flex items-center focus:outline-none">
+            {translatedText}
+          </div>
         </div>
       </section>
       <section>
