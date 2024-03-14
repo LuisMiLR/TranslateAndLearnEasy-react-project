@@ -3,17 +3,17 @@ import React, { useState, useEffect } from "react";
 export default function WorkPlace() {
   const [inputText, setInputText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
-  let typingTimeout = null; //keep delay
+  let typingTimeout = null;
 
   const handleInput = async (e) => {
     const text = e.target.value;
     setInputText(text);
 
-    clearTimeout(typingTimeout);
+    clearTimeout(typingTimeout); //cancels the input timer
 
     typingTimeout = setTimeout(() => {
       translate(text); //run translate text
-    }, 500);
+    }, 1000); //one second
   };
 
   const translate = async (textToTranslate) => {
