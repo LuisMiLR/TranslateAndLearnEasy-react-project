@@ -25,10 +25,11 @@ module.exports = {
         red2: "#ff4d4d",
         blue2: "#92bee7",
         blue5: "#023047", //023047; #434665
-        purple50: "#453D5B",
-        purple60: "#806B7E",
+        purple40: "#866cc7",
+        purple50: "#564A75", //"#564A75"
+        purple60: "#4A425D",
         purple70: "#302942",
-        purple100: "#564A75",
+        purple100: "#453D5B",
         qualified: "#3cb652",
         rankyellow: "#edb513",
         coolred: "#f271a7",
