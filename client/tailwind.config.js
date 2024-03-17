@@ -29,12 +29,15 @@ module.exports = {
         purple50: "#564A75", //"#564A75"
         purple60: "#4A425D",
         purple70: "#302942",
+        purple80: "#4A3880",
         purple100: "#453D5B",
         qualified: "#3cb652",
         rankyellow: "#edb513",
         coolred: "#f271a7",
         rankblue: "#1f87e7",
-        slader10: "#04344E",
+        slader5: "#3A4060", //#3D4366
+        slader6: "#054161", //
+        slader10: "#4D5480", //#2E324D #04344E #4D5480
         dark: "#2E2F38", //#25262D, /original #292726 #353231 #2E2F38
       },
       animation: {
