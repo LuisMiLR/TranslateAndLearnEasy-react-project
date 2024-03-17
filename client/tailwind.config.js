@@ -34,7 +34,8 @@ module.exports = {
         rankyellow: "#edb513",
         coolred: "#f271a7",
         rankblue: "#1f87e7",
-        dark: "#262729",
+        slader10: "#04344E",
+        dark: "#2E2F38", //#25262D, /original #292726 #353231 #2E2F38
       },
       animation: {
         first: "moveVertical 30s ease infinite",
