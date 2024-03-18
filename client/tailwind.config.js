@@ -7,39 +7,36 @@ module.exports = {
     extend: {
       colors: {
         black: {
-          30: "#131414", //#383838 #252525 #131414 #5B5B5B
+          30: "#131414",
           40: "#1D1D1D",
-          50: "#8a8b8d",
-          80: "#454549",
-          90: "#2d2e32",
-          95: "#222326",
-          100: "#16171b",
+          50: "",
+          80: "",
+          90: "",
+          100: "#0e0e11 ", //body color
+          110: "#272822",
         },
-        white: {
-          1: "white",
-          5: "rgba(255, 255, 255, .05)",
-          10: "rgba(255, 255, 255, .1)",
-          20: "rgba(255, 255, 255, .2)",
-          221: "rgba(255, 255, 255, .02)",
+        dblue: {
+          50: "#ebf0ff",
+          100: "#dbe4ff",
+          200: "#bdcbff",
+          300: "#94a8fe",
+          400: "#6c78fe",
+          500: "#4d50fe",
+          600: "#382afe",
+          700: "#3222e2",
+          800: "#291ec2",
+          900: "#241e8f",
+          950: "#161254",
         },
-        red2: "#ff4d4d",
-        blue2: "#92bee7",
-        blue5: "#023047", //023047; #434665
-        purple40: "#866cc7",
-        purple50: "#564A75", //"#564A75"
+        purple50: "#564A75",
         purple60: "#4A425D",
         purple70: "#302942",
         purple80: "#4A3880",
         purple100: "#453D5B",
-        qualified: "#3cb652",
-        rankyellow: "#edb513",
-        coolred: "#f271a7",
-        rankblue: "#1f87e7",
-        slader5: "#3A4060", //#3D4366
-        slader6: "#054161", //
-        slader10: "#4D5480", //#2E324D #04344E #4D5480
-        dark: "#2E2F38", //#25262D, /original #292726 #353231 #2E2F38
+        dark: "#0e0e11 ",
+        dark10: "#202023",
       },
+
       animation: {
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
