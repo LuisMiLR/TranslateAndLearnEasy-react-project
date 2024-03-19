@@ -3,6 +3,7 @@ import { FaArrowUpRightDots } from "react-icons/fa6";
 import { FaArrowUpZA } from "react-icons/fa6";
 import { FaBullseye } from "react-icons/fa6";
 import { FaBuffer } from "react-icons/fa6";
+import { translate, sendDataToBackend } from "../api/translation";
 
 export default function WorkPlace() {
   const [inputText, setInputText] = useState("");
@@ -16,36 +17,23 @@ export default function WorkPlace() {
     clearTimeout(typingTimeout); //cancels the input timer
 
     typingTimeout = setTimeout(() => {
-      translate(text); //run translate text
-    }, 1000); //one second
+      postTranslation(text); //run translate text
+    }, 1500);
   };
 
-  const translate = async (textToTranslate) => {
+  const postTranslation = async (textToTranslate) => {
     try {
-      const response = await fetch("/server/translate/translate", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ text: textToTranslate }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log(data);
-        setTranslatedText(data.text);
-      } else {
-        throw new Error("Erreur lors de la traduction");
-      }
+      const translated = await translate(textToTranslate);
+      setTranslatedText(translated);
     } catch (error) {
-      console.log("Erreur serveur de traduction:", error.message);
+      console.log("Erreur serveur de traduction:", error);
     }
   };
 
   return (
     <div>
       <div className=" bg-dark10 max-w-7xl mx-auto h-auto pb-16 mt-8 rounded-lg">
-        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-black-100 max-w-7xl mx-auto py-16 rounded-t-lg">
+        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-purple70 max-w-7xl mx-auto py-16 rounded-t-lg">
           <div className="flex max-w-6xl mx-auto text-base">
             <div className="flex mr-2 pt-1">
               <FaBullseye size="25px" color="#cbd5e1" />
@@ -65,9 +53,8 @@ export default function WorkPlace() {
         </div>
         <section className="max-w-6xl  mx-auto h- py-3 px-28 pb-  mt-8 rounded-lg  bg-dark border-2  border-gray-800">
           <div className=" text-gray-400  ">
-            <div className=" pb- flex justify-around ">
-              <p className="text-sm ">Anglais</p>
-              <p className="text-sm ">Français</p>
+            <div className=" pb- flex justify-center ">
+              <p className="text-sm ml-28">Traduction</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-x-1">
@@ -87,7 +74,10 @@ export default function WorkPlace() {
         </section>
         <section className="max-w-6xl mx-auto mt-4 flex justify-items-start">
           <div className=" flex flex-row justify-center h-30">
-            <button className="bg-dblue-400 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:opacity-60">
+            <button
+              onClick={() => sendDataToBackend(inputText, translatedText)}
+              className="bg-dblue-400 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:opacity-60"
+            >
               <div className="bg-blue-950 flex p-2 rounded-lg">
                 <FaArrowUpZA size="2em" color="white" />
               </div>

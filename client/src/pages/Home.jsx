@@ -1,7 +1,7 @@
 import React from "react";
 import { WavyBackground } from "../components/ui/wavy-background";
 import imageTest2 from "../assets/images/imageTest2.png";
-import evolutionRang from "../assets/images/evolutionRang.png";
+import evolutionRang2 from "../assets/images/evolutionRang.png";
 import PulseButton from "../components/ui/PulseButton";
 import { Link } from "react-router-dom";
 
@@ -88,7 +88,7 @@ export default function Home() {
           </p>
           <div className="col-span-4 w-full ">
             <img
-              src={evolutionRang}
+              src={evolutionRang2}
               alt="rang de progression d'apprentissage coloré"
               className="rounded-lg"
             />
