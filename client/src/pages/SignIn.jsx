@@ -49,7 +49,7 @@ export default function SignIn() {
     }
   };
   return (
-    <div className="bg-dark10 max-w-md mx-auto my-12 text-slate-100 rounded-lg">
+    <div className="bg-dark-10 max-w-md mx-auto my-12 text-slate-100 rounded-lg">
       <div className="flex justify-center gap-2 mx-9 ">
         <h1 className="text-2xl font-normal py-12">
           <span>Connexion</span>

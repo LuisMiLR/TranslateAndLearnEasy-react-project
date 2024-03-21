@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaArrowUpRightDots } from "react-icons/fa6";
 import { FaArrowUpZA } from "react-icons/fa6";
 import { FaBullseye } from "react-icons/fa6";
+import { FaChartColumn } from "react-icons/fa6";
+import { FaCertificate } from "react-icons/fa6";
 import { FaBuffer } from "react-icons/fa6";
 import { translate, sendDataToBackend } from "../api/translation";
 
@@ -18,7 +20,7 @@ export default function WorkPlace() {
 
     typingTimeout = setTimeout(() => {
       postTranslation(text); //run translate text
-    }, 1500);
+    }, 1000);
   };
 
   const postTranslation = async (textToTranslate) => {
@@ -32,11 +34,11 @@ export default function WorkPlace() {
 
   return (
     <div>
-      <div className=" bg-dark10 max-w-7xl mx-auto h-auto pb-16 mt-8 rounded-lg">
-        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-purple70 max-w-7xl mx-auto py-16 rounded-t-lg">
-          <div className="flex max-w-6xl mx-auto text-base">
+      <div className=" bg-dark-10 max-w-7xl mx-auto h-auto pb-16 mt-8 rounded-lg">
+        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-purple-70 max-w-7xl mx-auto py-16 rounded-t-lg">
+          <div className="flex max-w-6xl mx-20 text-base">
             <div className="flex mr-2 pt-1">
-              <FaBullseye size="25px" color="#cbd5e1" />
+              <FaBuffer size="25px" color="#cbd5e1" />
             </div>
             <h2 className="text-xl font-normal mt-1 pr-4">
               Workplace Translate&LearnEasy
@@ -51,28 +53,23 @@ export default function WorkPlace() {
             </div>
           </div>
         </div>
-        <section className="max-w-6xl  mx-auto h- py-3 px-28 pb-  mt-8 rounded-lg  bg-dark border-2  border-gray-800">
-          <div className=" text-gray-400  ">
-            <div className=" pb- flex justify-center ">
-              <p className="text-sm ml-28">Traduction</p>
-            </div>
-          </div>
+        <section className="max-w-6xl  mx-auto py-3 px-24 mt-8 rounded-lg  bg-dark-100 border-2  border-gray-800">
           <div className="grid grid-cols-2 gap-x-1">
             <div className=" flex rounded-lg focus:outline-none">
               <input
                 type="text"
-                placeholder="Texte à traduire..."
-                className=" bg-dark w-full h-52 pl-4 pb-20 rounded-lg text-lg focus:outline-none"
+                placeholder=" Saisie le texte à traduire..."
+                className=" bg-dark-100 w-full h-52 pl- pb-20 rounded-lg text-lg focus:outline-none"
                 value={inputText}
                 onChange={handleInput}
               />
             </div>
-            <div className="bg-dark p-6 pt-12 rounded-lg text-lg focus:outline-none">
+            <div className="bg-dark-100 p-6 ml-14 pt-12 rounded-lg text-lg focus:outline-none">
               {translatedText}
             </div>
           </div>
         </section>
-        <section className="max-w-6xl mx-auto mt-4 flex justify-items-start">
+        <section className="max-w-6xl mx-20 mt-4 flex justify-items-start">
           <div className=" flex flex-row justify-center h-30">
             <button
               onClick={() => sendDataToBackend(inputText, translatedText)}
@@ -91,7 +88,7 @@ export default function WorkPlace() {
             </button>
             <button className="bg-dblue-600 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:opacity-80">
               <div className="bg-blue-950 flex p-2 rounded-lg">
-                <FaArrowUpRightDots size="2em" color="white" />
+                <FaChartColumn size="2em" color="white" />
               </div>
               <p className="ml-2">Dashboard</p>
             </button>

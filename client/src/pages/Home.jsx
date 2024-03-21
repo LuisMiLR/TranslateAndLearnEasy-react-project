@@ -23,7 +23,7 @@ export default function Home() {
       </section>
 
       <section className="text-slate-100 mb-7 ">
-        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-purple70 max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
+        <div className="flex flex-row bg-gradient-to-r from-dblue-600 to-purple-70 max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
           <div className="flex flex-col items-start  mr-28">
             <h2 className="text-4xl font-semibold pb-8">
               Améliore tes compétences en Anglais
@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
       <section className="max-w-7xl mx-auto grid grid-cols-5 gap-x-7 text-slate-100 mb-7">
-        <div className="col-span-2 rounded-lg bg-dark10 py-16 px-16">
+        <div className="col-span-2 rounded-lg bg-dark-10 py-16 px-16">
           {/* Contenu du premier conteneur, 40% de largeur */}
           <h2 className="text-4xl font-semibold pb-8">
             Mémorise tout le nouveau vocabulaire
@@ -76,7 +76,7 @@ export default function Home() {
             d'apprentissage
           </p>
         </div>
-        <div className="col-span-3 rounded-lg bg-dark10 ">
+        <div className="col-span-3 rounded-lg bg-dark-10 ">
           {/* Contenu du deuxième conteneur, 60% de largeur */}
           <h2 className="text-4xl font-semibold pb-8 py-16 px-16">
             Gagne des rangs de progression et d'évolution
