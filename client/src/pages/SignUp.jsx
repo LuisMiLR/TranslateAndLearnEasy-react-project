@@ -48,7 +48,7 @@ export default function SignUp() {
     }
   };
   return (
-    <div className="bg-dark-10 max-w-md mx-auto my-12 text-slate-100 rounded-lg">
+    <div className="bg-black-900 max-w-md mx-auto my-12 text-slate-100 rounded-lg border border-gray-800">
       <div className="flex justify-center gap-2 mx-9 ">
         <h1 className="text-2xl font-normal py-12">
           Inscription <span className="text-slate-100">Translate</span>
