@@ -35,7 +35,7 @@ export default function WorkPlace() {
   return (
     <div>
       <div className=" bg-black-900 max-w-7xl mx-auto h-auto flex-col pb-16 mt-8 rounded-lg">
-        <div className="flex flex-row bg-gradient-to-r from-black-920 via-hippieblue-500 to-hippieblue-600  max-w-7xl mx-auto py-16 rounded-t-lg">
+        <div className="flex flex-row bg-gradient-to-r from-hippieblue-300  to-hippieblue-600  max-w-7xl mx-auto py-16 rounded-t-lg">
           <div className="flex max-w-6xl mx-20 text-slate-100 text-base">
             <div className="flex mr-2 pt-1">
               <FaBuffer size="25px" color="#f1f5f9" />

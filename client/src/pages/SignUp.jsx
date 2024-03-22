@@ -52,7 +52,7 @@ export default function SignUp() {
       <div className="flex justify-center gap-2 mx-9 ">
         <h1 className="text-2xl font-normal py-12">
           Inscription <span className="text-slate-100">Translate</span>
-          <span className="text-dblue-400">&LearnEasy</span>
+          <span className="text-hippieblue-970">&LearnEasy</span>
         </h1>
       </div>
       <form onSubmit={handleSubmit} className="flex flex-col">

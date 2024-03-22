@@ -7,29 +7,17 @@ module.exports = {
     extend: {
       colors: {
         black: {
-          30: "#131414",
-          40: "#1D1D1D",
-          50: "#1c1e21",
-          500: "#2e2e32",
-          80: "#3c3f44", //shiki gray
+          80: "#3c3f44", // gray
           700: "#98989F", //color text secondary
           800: "#18181B", //bg searchbar
           810: "#2E2E32", //btn in searchbar
-          820: "#414853", //btn secondary!! mako-800
-          830: "#9CA3AF", //ligne in code card
-          90: "#1b1b1f", //bg shiki
-          900: "#202127", //bg card shiki colorzilla
+          90: "#1b1b1f", //bg shik
+          900: "#202127", //bg card shik
           910: "#2d3339", //border card
-          920: "#6AA1B7", //blue primary btn !! hippieblue-400
-          960: "#8CCCD5", //blue title website
           930: "#fffff5", //title e0e0d8
           940: "#e0e0d8", //text secondary ?
-          970: "#65a0b6", //blue dark !! > hippieblue-500
-          980: "#83d0da", // blue Primary !!
           990: "#1E1E1E", //dark card
           1000: "#2b2f36", //bg icons
-          100: "#0e0e11 ", //body color
-          110: "#272822",
         },
         mako: {
           50: "#f4f6f7",
@@ -40,7 +28,7 @@ module.exports = {
           500: "#5b6d7f",
           600: "#4e5b6c",
           700: "#444d5a",
-          800: "#414853",
+          800: "#414853", //btn secondary!!
           900: "#363b43",
           950: "#21242b",
         },
@@ -49,13 +37,15 @@ module.exports = {
           100: "#ddecf0",
           200: "#bedae3",
           300: "#92bfce",
-          400: "#65a0b6",
-          500: "#427f98",
+          400: "#65a0b6", //blue primary btn !!
+          500: "#427f98", //blue dark !!
           600: "#3a6980",
           700: "#34566a",
           800: "#314959",
           900: "#2c3f4d",
           950: "#1a2832",
+          960: "#8CCCD5", //blue title website
+          970: "#83d0da", // blue Primary !!
         },
         breakwhite: {
           20: "#DFDFD6",
@@ -64,15 +54,6 @@ module.exports = {
           20: "#f6eecf",
           50: "#E6CC78",
           60: "#e3c466",
-        },
-        purple: {
-          70: "#302942",
-          80: "#4A3880",
-          100: "#453D5B",
-        },
-        dark: {
-          10: "#202023", //dark
-          100: "#0e0e11",
         },
       },
 
