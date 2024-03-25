@@ -45,7 +45,7 @@ module.exports = {
           900: "#2c3f4d",
           950: "#1a2832",
           960: "#8CCCD5", //blue title website
-          970: "#83d0da", // blue Primary !!
+          970: "#83d0da", // blue Primary !!   ref for ui Colors: #24759e
         },
         breakwhite: {
           20: "#DFDFD6",

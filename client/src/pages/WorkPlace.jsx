@@ -6,10 +6,13 @@ import { FaChartColumn } from "react-icons/fa6";
 import { FaCertificate } from "react-icons/fa6";
 import { FaBuffer } from "react-icons/fa6";
 import { translate, sendDataToBackend } from "../api/translation";
+import { useNavigate } from "react-router-dom";
 
 export default function WorkPlace() {
+  const navigate = useNavigate();
   const [inputText, setInputText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
+
   let typingTimeout = null;
 
   const handleInput = async (e) => {
@@ -35,7 +38,7 @@ export default function WorkPlace() {
   return (
     <div>
       <div className=" bg-black-900 max-w-7xl mx-auto h-auto flex-col pb-16 mt-8 rounded-lg">
-        <div className="flex flex-row bg-gradient-to-r from-hippieblue-300  to-hippieblue-600  max-w-7xl mx-auto py-16 rounded-t-lg">
+        <div className="flex flex-row bg-gradient-to-r from-hippieblue-400  to-hippieblue-600  max-w-7xl mx-auto py-16 rounded-t-lg">
           <div className="flex max-w-6xl mx-20 text-slate-100 text-base">
             <div className="flex mr-2 pt-1">
               <FaBuffer size="25px" color="#f1f5f9" />
@@ -97,15 +100,19 @@ export default function WorkPlace() {
             </button>
           </div>
         </section>
-        <section className>
+        <section>
           <h2 className="mx-16 text-2xl pb-8">Learning</h2>
-          <div className="bg-dblue-950 max-w-6xl mx-auto h-36 flex rounded-lg ">
-            <div className="w-2/3 p-4">
-              <p className>Fait grandir ton vocabulaire en anglais</p>
+          <div className="max-w-6xl mx-auto h-[640px] grid grid-cols-3 gap-6 bg-blue-800">
+            <div className="col-span-2 bg-sky-800">banner</div>
+            <div className="col-span-1 flex items-center justify-center bg-sky-600">
+              bannerImage
             </div>
-            <div className="w-1/3 h-36">
-              <img className=" rounded-lg object-scale-down" alt="" />
-            </div>
+            <div className="px-24 bg-sky-300">item1</div>
+            <div className=" bg-sky-300">item2</div>
+            <div className=" bg-sky-300">item3</div>
+            <div className=" bg-sky-300">item4</div>
+            <div className=" bg-sky-300">item5</div>
+            <div className=" bg-sky-300">item6</div>
           </div>
         </section>
       </div>
