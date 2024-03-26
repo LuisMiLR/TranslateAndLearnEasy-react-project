@@ -32,21 +32,6 @@ module.exports = {
           900: "#363b43",
           950: "#21242b",
         },
-        hippieblue: {
-          50: "#f2f8f9",
-          100: "#ddecf0",
-          200: "#bedae3",
-          300: "#92bfce",
-          400: "#65a0b6", //blue primary btn !!
-          500: "#427f98", //blue dark !!
-          600: "#3a6980",
-          700: "#34566a",
-          800: "#314959",
-          900: "#2c3f4d",
-          950: "#1a2832",
-          960: "#8CCCD5", //blue title website
-          970: "#83d0da", // blue Primary !!   ref for ui Colors: #24759e
-        },
         breakwhite: {
           20: "#DFDFD6",
         },

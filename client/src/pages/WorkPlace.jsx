@@ -79,14 +79,14 @@ export default function WorkPlace() {
           <div className=" flex flex-row justify-center h-30">
             <button
               onClick={() => sendDataToBackend(inputText, translatedText)}
-              className="bg-sky-300 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-hippieblue-300"
+              className="bg-sky-300 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-sky-200"
             >
               <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpZA size="2em" color="white" />
               </div>
               <p className="ml-2 text-slate-100">Add to list</p>
             </button>
-            <button className="bg-sky-300 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-hippieblue-300">
+            <button className="bg-sky-300 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-sky-200">
               <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpRightDots size="2em" color="white" />
               </div>
