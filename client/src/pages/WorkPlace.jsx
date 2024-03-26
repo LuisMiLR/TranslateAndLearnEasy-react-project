@@ -39,7 +39,7 @@ export default function WorkPlace() {
     <div>
       <div className=" bg-black-900 max-w-7xl mx-auto h-auto flex-col pb-16 mt-8 rounded-lg">
         <div className="flex flex-row bg-gradient-to-r from-sky-300  to-sky-600  max-w-7xl mx-auto py-16 rounded-t-lg">
-          <div className="flex max-w-6xl mx-20 text-base">
+          <div className="flex max-w-6xl mx-16 text-base">
             <div className="flex mr-2 pt-1">
               <FaBuffer size="25px" color="#f1f5f9" />
             </div>
@@ -58,18 +58,18 @@ export default function WorkPlace() {
         </div>
         <section className="max-w-6xl mx-auto">
           <h2 className="mt-8 ml-2 text-2xl">Translator</h2>
-          <div className=" py-3 px-24 mt-8 rounded-lg  bg-black-990 border border-black-910">
+          <div className=" py-3 px-24 mt-8 rounded-lg  bg-mako-950  border border-black-910">
             <div className=" grid grid-cols-2 gap-x-1">
               <div className=" flex rounded-lg focus:outline-none">
                 <input
                   type="text"
                   placeholder=" Saisie le texte à traduire..."
-                  className=" bg-black-990 w-full h-52 pb-20 rounded-lg text-lg focus:outline-none"
+                  className=" bg-mako-950  w-full h-52 pb-20 rounded-lg text-lg focus:outline-none"
                   value={inputText}
                   onChange={handleInput}
                 />
               </div>
-              <div className="bg-black-990 p-6 ml-14 pt-12 rounded-lg text-lg focus:outline-none">
+              <div className="bg-mako-950 p-6 ml-14 pt-12 rounded-lg text-lg focus:outline-none">
                 {translatedText}
               </div>
             </div>
@@ -79,14 +79,14 @@ export default function WorkPlace() {
           <div className=" flex flex-row justify-center h-30">
             <button
               onClick={() => sendDataToBackend(inputText, translatedText)}
-              className="bg-sky-300 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-sky-200"
+              className="bg-sky-400 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-sky-300"
             >
               <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpZA size="2em" color="white" />
               </div>
               <p className="ml-2 text-slate-100">Add to list</p>
             </button>
-            <button className="bg-sky-300 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-sky-200">
+            <button className="bg-sky-400 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-sky-300">
               <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpRightDots size="2em" color="white" />
               </div>
@@ -102,52 +102,44 @@ export default function WorkPlace() {
         </section>
         <section>
           <h2 className="mx-16 text-2xl pb-8">Learning</h2>
-          <div className="grid grid-cols-4 max-w-6xl mx-auto h-52 pb-8 gap-x-7">
-            <div className="grid-col-span-3 col-start-1 col-end-4 rounded-lg bg-sky-700">
-              <p className="text-xl text-slate-100 pt-9 pb-4 mx-16">
+          <div className="grid grid-cols-4 max-w-6xl mx-auto h-52 mb-7 gap-x-7">
+            <div className="grid-col-span-3 col-start-1 col-end-4 rounded-lg bg-black-1000">
+              <p className="text-2xl text-slate-100 pt-12 pb-4 mx-14">
                 Fait grandir ton vocabulaire de manière simple
               </p>
-              <p className="text-lg text-slate-100 mx-16 pb-10">
-                Révise les termes appris et gagnes des points de connaissances.
-                La clé du succes est régurarité, parle de manière aisé en
-                atteingnant les 6000 mots de vocabulaire
+              <p className="text-lg text-slate-100 mx-14 ">
+                Révise les termes appris et gagne des points de connaissances.
+                La clé du succès est régularité Communique de manière aisée en
+                atteignant les 6000 mots de vocabulaire
               </p>
             </div>
-            <div className="grid-col-span-1 col-start-4 rounded-lg items-center justify-center bg-sky-600">
+            <div className="grid-col-span-1 col-start-4 rounded-lg items-center justify-center bg-sky-700 ">
               bannerImage
             </div>
           </div>
           <div className="max-w-6xl mx-auto h-[420px] grid grid-cols-4 gap-7">
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 border border-gray-800 hover:bg-sky-400">
+              <div className="  text-2xl font-normal text-slate-100">
                 Last 10 words
               </div>
             </button>
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 hover:bg-sky-400">
+              <div className="  text-2xl font-normal text-slate-100">
                 Last 20 words
               </div>
             </button>
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
-                Last 50 words
-              </div>
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 hover:bg-sky-400">
+              <div className="  text-2xl text-slate-100">Last 50 words</div>
             </button>
-            <div className="row-span-2 rounded-lg bg-sky-700">item4</div>
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
-                Last 125 words
-              </div>
+            <div className="row-span-2 rounded-lg bg-black-1000">item4</div>
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 hover:bg-sky-400">
+              <div className="  text-2xl text-slate-100">Last 125 words</div>
             </button>
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
-                Random all words
-              </div>
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 hover:bg-sky-400">
+              <div className="  text-2xl text-slate-100">Random all words</div>
             </button>
-            <button className=" flex justify-center items-center rounded-lg bg-sky-300 hover:bg-sky-200">
-              <div className="  text-2xl font-medium text-mako-700">
-                List of words
-              </div>
+            <button className=" flex justify-center items-center rounded-lg bg-mako-900 hover:bg-sky-400">
+              <div className="  text-2xl text-slate-100">List of words</div>
             </button>
           </div>
         </section>
