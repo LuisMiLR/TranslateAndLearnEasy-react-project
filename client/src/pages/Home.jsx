@@ -1,7 +1,7 @@
 import React from "react";
 import { WavyBackground } from "../components/ui/wavy-background";
-import imageTest2 from "../assets/images/imageTest2.png";
 import evolutionRand3 from "../assets/images/evolutionRand3.png";
+import workplaceExemple from "../assets/images/workplaceExemple.png";
 import PulseButton from "../components/ui/PulseButton";
 import { Link } from "react-router-dom";
 
@@ -51,8 +51,8 @@ export default function Home() {
           </div>
           <div>
             <img
-              className=" h-80 w-full object-cover opacity-80 rounded-s-lg"
-              src={imageTest2}
+              className=" h-80 w-full object-cover  rounded-s-lg border-2 border-gray-500"
+              src={workplaceExemple}
               alt="dashboard"
             />
           </div>

@@ -37,7 +37,7 @@ module.exports = {
         },
         yellow: {
           20: "#f6eecf",
-          50: "#E6CC78",
+
           60: "#e3c466",
         },
       },

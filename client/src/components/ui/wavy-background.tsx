@@ -116,6 +116,8 @@ export const WavyBackground = ({
         ref={canvasRef}
         id="canvas"
         style={{
+          width: "100vw", // Largeur de la fenêtre
+          maxWidth: "100%", // Limite la largeur à la largeur de la fenêtre
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
