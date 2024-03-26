@@ -38,7 +38,7 @@ export default function WorkPlace() {
   return (
     <div>
       <div className=" bg-black-900 max-w-7xl mx-auto h-auto flex-col pb-16 mt-8 rounded-lg">
-        <div className="flex flex-row bg-gradient-to-r from-hippieblue-400  to-hippieblue-600  max-w-7xl mx-auto py-16 rounded-t-lg">
+        <div className="flex flex-row bg-gradient-to-r from-sky-300  to-sky-600  max-w-7xl mx-auto py-16 rounded-t-lg">
           <div className="flex max-w-6xl mx-20 text-slate-100 text-base">
             <div className="flex mr-2 pt-1">
               <FaBuffer size="25px" color="#f1f5f9" />
@@ -64,7 +64,7 @@ export default function WorkPlace() {
                 <input
                   type="text"
                   placeholder=" Saisie le texte à traduire..."
-                  className=" bg-black-990 w-full h-52 pl- pb-20 rounded-lg text-lg focus:outline-none"
+                  className=" bg-black-990 w-full h-52 pb-20 rounded-lg text-lg focus:outline-none"
                   value={inputText}
                   onChange={handleInput}
                 />
@@ -79,15 +79,15 @@ export default function WorkPlace() {
           <div className=" flex flex-row justify-center h-30">
             <button
               onClick={() => sendDataToBackend(inputText, translatedText)}
-              className="bg-hippieblue-400 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-hippieblue-300"
+              className="bg-sky-300 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-hippieblue-300"
             >
-              <div className="bg-cyan-600  flex p-2 rounded-lg">
+              <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpZA size="2em" color="white" />
               </div>
               <p className="ml-2 text-slate-100">Add to list</p>
             </button>
-            <button className="bg-hippieblue-400 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-hippieblue-300">
-              <div className="bg-cyan-600  flex p-2 rounded-lg">
+            <button className="bg-sky-300 max-w-7xl h-14  mx-auto mr-4 flex  items-center p-3 rounded-lg text-base hover:bg-hippieblue-300">
+              <div className="bg-sky-700  flex p-2 rounded-lg">
                 <FaArrowUpRightDots size="2em" color="white" />
               </div>
               <p className="ml-2 text-slate-100">Learn words</p>
@@ -102,17 +102,22 @@ export default function WorkPlace() {
         </section>
         <section>
           <h2 className="mx-16 text-2xl pb-8">Learning</h2>
-          <div className="max-w-6xl mx-auto h-[640px] grid grid-cols-3 gap-6 bg-blue-800">
-            <div className="col-span-2 bg-sky-800">banner</div>
-            <div className="col-span-1 flex items-center justify-center bg-sky-600">
+          <div className="grid grid-cols-4 max-w-6xl mx-auto h-52 pb-8 gap-x-7   ">
+            <div className="grid-col-span-3 col-start-1 col-end-4 rounded-lg bg-sky-800">
+              banner
+            </div>
+            <div className="grid-col-span-1 col-start-4 rounded-lg items-center justify-center bg-sky-600">
               bannerImage
             </div>
-            <div className="px-24 bg-sky-300">item1</div>
-            <div className=" bg-sky-300">item2</div>
-            <div className=" bg-sky-300">item3</div>
-            <div className=" bg-sky-300">item4</div>
-            <div className=" bg-sky-300">item5</div>
-            <div className=" bg-sky-300">item6</div>
+          </div>
+          <div className="max-w-6xl mx-auto h-[420px] grid grid-cols-4 gap-7">
+            <div className=" rounded-lg px-24 bg-sky-300">item1</div>
+            <div className="rounded-lg bg-sky-300">item2</div>
+            <div className="rounded-lg bg-sky-300">item3</div>
+            <div className="row-span-2    rounded-lg bg-sky-700">item4</div>
+            <div className="rounded-lg bg-sky-300">item5</div>
+            <div className="rounded-lg bg-sky-300">item6</div>
+            <div className="rounded-lg bg-sky-300">item6</div>
           </div>
         </section>
       </div>

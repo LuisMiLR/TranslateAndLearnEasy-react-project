@@ -9,10 +9,7 @@ export default function Home() {
   return (
     <div>
       <section>
-        <WavyBackground
-          colors={["#83D0DA", "#0891b2", "92bfce", "#e3c466"]}
-          className="max-w-4xl mx-auto pb-20"
-        >
+        <WavyBackground className="max-w-4xl mx-auto pb-20">
           <h1 className="text-2xl md:text-4xl lg:text-7xl text-slate-100 font-bold inter-var text-center">
             Plonge dans la maitrise de l'Anglais
           </h1>
@@ -23,7 +20,7 @@ export default function Home() {
       </section>
 
       <section className="text-slate-100 mb-7 ">
-        <div className="flex flex-row bg-gradient-to-r from-hippieblue-300  to-hippieblue-600  max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
+        <div className="flex flex-row bg-gradient-to-r from-sky-300  to-sky-600  max-w-7xl mx-auto h-100 py-16 pl-16 rounded-lg">
           <div className="flex flex-col items-start  mr-28">
             <h2 className="text-4xl font-semibold pb-8">
               Améliore tes compétences en Anglais
