@@ -12,6 +12,8 @@ export default function WorkPlace() {
   const navigate = useNavigate();
   const [inputText, setInputText] = useState("");
   const [translatedText, setTranslatedText] = useState("");
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   let typingTimeout = null;
 
@@ -32,6 +34,34 @@ export default function WorkPlace() {
       setTranslatedText(translated);
     } catch (error) {
       console.log("Erreur serveur de traduction:", error);
+    }
+  };
+
+  const handleSaveTerm = async () => {
+    try {
+      //check input fields
+      if (!inputText.trim() || !translatedText.trim()) {
+        setError("Veuillez remplir tous les champs"); // error message
+        return;
+      }
+      //Check data format (e.g. alphabetical characters only)
+      const wordRegex = /^[A-Za-z'-]+$/;
+      if (!wordRegex.inputText || !wordRegex.translatedText)
+        setError("Veuillez remplir des caractères valides");
+
+      //send data to backend if check input as successfull
+      const response = await sendDataToBackend(inputText, translatedText);
+      //check save successfull
+      if (response && response.message === "word saved successfully") {
+        //reset input field after successful save
+        setInputText("");
+        setTranslatedText("");
+        setError(""); // reset error if save is ok
+        setSuccessMessage(response.message);
+      }
+    } catch (error) {
+      console.log("Erreur lors de l'enregistrement du terme", error);
+      setError("Erreur lors de l'enregistrement du terme");
     }
   };
 
@@ -72,13 +102,20 @@ export default function WorkPlace() {
               <div className="bg-mako-950 p-6 ml-14 pt-12 rounded-lg text-lg focus:outline-none">
                 {translatedText}
               </div>
+              <div>
+                {error && <p className="text-red-400 text-base">{error}</p>}
+                {successMessage && ( //bug a corriger le message ne s'affiche pas
+                  <p className="text-green-600">super{successMessage}</p>
+                )}
+              </div>
+              <div></div>
             </div>
           </div>
         </section>
         <section className="max-w-6xl mx-16 mt-8 pb-16 flex justify-items-start">
           <div className=" flex flex-row justify-center h-30">
             <button
-              onClick={() => sendDataToBackend(inputText, translatedText)}
+              onClick={handleSaveTerm}
               className="bg-sky-400 max-w-7xl h-14 mx-auto mr-4 flex  items-center p-2 rounded-lg text-base hover:bg-sky-300"
             >
               <div className="bg-sky-700  flex p-2 rounded-lg">
@@ -117,7 +154,7 @@ export default function WorkPlace() {
               bannerImage
             </div>
           </div>
-          <div className="max-w-6xl mx-auto h-[420px] grid grid-cols-4 gap-7">
+          <div className="max-w-6xl mx-auto h-[250px] grid grid-cols-4 gap-7">
             <button className=" flex justify-center items-center rounded-lg bg-mako-900 border border-gray-800 hover:bg-sky-400">
               <div className="  text-2xl font-normal text-slate-100">
                 Last 10 words

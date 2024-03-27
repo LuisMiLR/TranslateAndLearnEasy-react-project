@@ -17,7 +17,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    //Vérifie si les champs sont présent dans le formulaire
+    //Check if field is present
     const requiredFields = ["email", "password"];
 
     if (!requiredFields.every((field) => formData[field])) {

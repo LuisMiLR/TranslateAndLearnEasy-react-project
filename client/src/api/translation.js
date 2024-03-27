@@ -32,7 +32,7 @@ export const sendDataToBackend = async (inputText, translatedText) => {
         translation: translatedText,
       }),
     });
-
+    console.log("log response data", response);
     if (response.ok) {
       const data = await response.json();
       console.log(data); //response server

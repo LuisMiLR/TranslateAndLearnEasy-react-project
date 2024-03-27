@@ -15,7 +15,7 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    //Vérifier si les champs sont présent dans le formulaire
+    //check if input fields are filled in
     const requiredFields = ["username", "email", "password"];
 
     if (!requiredFields.every((field) => formData[field])) {
