@@ -3,7 +3,7 @@
 ## Description
 
 "Translate And Learn Easy: Une application de traduction Anglais / Français qui permet l'apprentissage dynamique des mots consultés via un système de gamification.
-Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options d'enseignement."
+Elle exploite l'efficacité de l'API de DeepL pour les traductions, tout en offrant un plateau de jeu visant à renforcer la mémorisation des termes récemment consultés, avec des options d'enseignement.
 
 ## Fonctionnalités
 
@@ -88,7 +88,11 @@ Assurez-vous de suivre la documentation de Vite pour plus d'informations sur la 
 
 ## Captures d'écran
 
-à vernir
+![Capture d'écran de la homepage](/client/src/assets/images/Translate-and-Learn-Easy-Project-React-LuisMiLR.png)
+
+![Capture d'écran de la signup page](/client/src/assets/images/Translate-and-Learn-Easy-sign-up-page.png)
+
+![Capture d'écran de la worlkplace page](/client/src/assets/images/Translate-and-Learn-Easy-workPlace-page1.png)
 
 **Auteur :** LuisMiLR
 **Date de création :** 20.02.2024

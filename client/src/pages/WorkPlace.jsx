@@ -154,7 +154,7 @@ export default function WorkPlace() {
               bannerImage
             </div>
           </div>
-          <div className="max-w-6xl mx-auto h-[250px] grid grid-cols-4 gap-7">
+          <div className="max-w-6xl mx-auto h-[400px] grid grid-cols-4 gap-7">
             <button className=" flex justify-center items-center rounded-lg bg-mako-900 border border-gray-800 hover:bg-sky-400">
               <div className="  text-2xl font-normal text-slate-100">
                 Last 10 words
